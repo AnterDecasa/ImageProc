@@ -54,6 +54,20 @@ public class Test extends JFrame {
         workArea.add(segmentBtn);
         */
         write("Number of object found: " + ObjectDetection.countObjects(readImage(new File("C:/Users/anter_000/Desktop/image processing/" + "cntObjects.png"))));
+        
+        //write("Area of Image: " + ImageArea(readImage("iregShape.png")) + "\n");
+        write("Area of filled shape: " + Area_in_pixels.AreaWithFill(readImage(new File("C:/Users/anter_000/Desktop/image processing/" + "iregShapeWithFill.png"))) + "\n");
+	write("Area of shape without fill is filled: " + Area_in_pixels.AreaWithFill(Area_in_pixels.FillShape(readImage(new File("C:/Users/anter_000/Desktop/image processing/" + "iregShapeWithFill.png")))) + "\n");
+	//write("Area of filled shape: " + AreaWithFill(readImage("iregShapeWithFill.png")) + "\n");
+	//write("Area of shape without fill is filled: " + AreaWithFill(FillShapeThickLine(readImage("iregShapeWithFill.png"))) + "\n");
+	//write("Area of filled shape: " + AreaWithFill(readImage("iregShapeWithFillThick.png")) + "\n");
+	//write("Area of shape without fill is filled: " + AreaWithFill(FillShapeThickLine(readImage("iregShapeWithFillThick.png"))) + "\n");
+	//write("Black: " + AreaWithFill(readImage("iregShape.png")) + "\n");
+	//write("White: " + AreaBg(readImage("iregShape.png")) + "\n");
+	//write("Area without fill: " + AreaWithNoFill(readImage("iregShape.png")) + "\n");
+		
+	write("Getting area in pixels done.\n");
+        
         this.addWindowListener(new WindowAdapter(){
             @Override
             public void windowClosing(WindowEvent e) {

@@ -34,6 +34,7 @@ public class Test extends JFrame {
     public static void main(String[] args){
         
         frame = new Test();
+        //write("Number of object found: " + ObjectDetection.countObjects(readImage(new File("C:/Users/anter_000/Desktop/image processing/" + "cntObjects.png"))));
         
     }
     
@@ -52,6 +53,7 @@ public class Test extends JFrame {
         workArea.setVisible(true);
         workArea.add(segmentBtn);
         */
+        write("Number of object found: " + ObjectDetection.countObjects(readImage(new File("C:/Users/anter_000/Desktop/image processing/" + "cntObjects.png"))));
         this.addWindowListener(new WindowAdapter(){
             @Override
             public void windowClosing(WindowEvent e) {
@@ -121,7 +123,7 @@ public class Test extends JFrame {
 
     }
     
-    private BufferedImage readImage(File file){
+    private static BufferedImage readImage(File file){
         
         BufferedImage readImage = null;
         
@@ -138,7 +140,7 @@ public class Test extends JFrame {
         
     }
 
-    public void write(String string){
+    private static void write(String string){
         System.out.print(string);
     }
     
